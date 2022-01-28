@@ -1,0 +1,128 @@
+/* ======== Configurações ======== */
+
+@font-face {
+  font-family: 'Cloister';
+  src: url(/fonts/CloisterBlack.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Cloister', serif;
+  text-decoration: none;
+}
+
+/* ======== Animações ======== */
+
+@keyframes inPage {
+  0% {
+    opacity: 0%;
+    transform: translateX(1000px);
+  }
+
+  100%{
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+@keyframes outsidePage {
+  0% {
+    opacity: 100%;
+  }
+  50%{
+    opacity: 0%;
+  }
+  100%{
+    display: none;
+    opacity: 0%;
+  }
+  
+}
+/* ======== Layout ======== */
+
+.container-geral {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/img/background-1440x1024.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main > .aotm_principal {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+main > .aotm_principal > h1 {
+  color: white;
+  font-weight: normal;
+  font-size: 5rem;
+  padding-bottom: 2.5rem;
+}
+
+main > .aotm_principal > button {
+  width: 31.25rem;
+  height: 6.25rem;
+  background-color: transparent;
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  border: 5px solid white;
+}
+
+main > .aotm_principal > button:hover {
+  cursor: pointer;
+  background-color: red;
+  font-size: 3.25rem;
+  width: 32.5rem;
+  height: 7.5rem;
+}
+
+.wrapper {
+  width: 50rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.box {
+  width: 6rem;
+  height: 3rem;
+  background-color: red;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  line-height: 3rem;
+  border-radius: 8px;
+  margin: 1rem;
+  transition: all .3s;
+}
+
+.box:hover {
+  background-color: white;
+  color: black;
+}
+
+.outsidePage {
+  display: none;
+}
+
+.volumes-outPage{
+  display: none;
+}
+
+.inPage {
+  animation: inPage 1.5s ease-out forwards;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
