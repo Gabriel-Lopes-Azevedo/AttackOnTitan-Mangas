@@ -13,12 +13,10 @@
   text-decoration: none;
 }
 
-/* ======== Animações ======== */
-
 @keyframes inPage {
   0% {
     opacity: 0%;
-    transform: translateX(1000px);
+    transform: translateX(400px);
   }
 
   100%{
@@ -27,24 +25,8 @@
   }
 }
 
-@keyframes outsidePage {
-  0% {
-    opacity: 100%;
-  }
-  50%{
-    opacity: 0%;
-  }
-  100%{
-    display: none;
-    opacity: 0%;
-  }
-  
-}
-/* ======== HTML Index Layout ======== */
-
 .container-geral {
   width: 100%;
-  height: 100vh;
   background-image: url(../img/background-1440x1024.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -61,20 +43,24 @@ main {
   align-items: center;
 }
 
-main > .aotm_principal {
+main > .titulo-paginas {
   display: flex;
-  align-items: center;
   flex-direction: column;
-}
-
-main > .aotm_principal > h1 {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
   color: white;
-  font-weight: normal;
-  font-size: 5rem;
-  padding-bottom: 2.5rem;
+  margin-top: 1rem;
+  animation: inPage 1.5s ease-out forwards;
 }
 
-main > .aotm_principal > button {
+main > .titulo-paginas > h1 {
+  font-size: 4rem;
+  font-weight: normal;
+  margin-bottom: 2rem;
+}
+
+main > .titulo-paginas > a > .ler {
   width: 31.25rem;
   height: 6.25rem;
   background-color: transparent;
@@ -85,7 +71,7 @@ main > .aotm_principal > button {
   transition: all .2s;
 }
 
-main > .aotm_principal > button:hover {
+main > .titulo-paginas > a > .ler:hover {
   cursor: pointer;
   background-color: red;
   font-size: 3.25rem;
@@ -93,39 +79,11 @@ main > .aotm_principal > button:hover {
   height: 7.5rem;
 }
 
-main > h1 {
-  color: white;
-  font-weight: normal;
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+main > .titulo-paginas > audio {
+  margin-top: 2rem;
 }
 
-.wrapper {
-  width: 50rem;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.box {
-  width: 6rem;
-  height: 3rem;
-  background-color: red;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  line-height: 3rem;
-  border-radius: 8px;
-  margin: 1rem;
-  transition: all .3s;
-}
-
-.box:hover {
-  background-color: white;
-  color: black;
-}
-
-#Voltar {
+.voltar {
   width: 8rem;
   height: 3rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -139,14 +97,12 @@ main > h1 {
   transition: all .2s;
 }
 
-#Voltar:hover {
+.voltar:hover {
   background-color: red;
   width: 8.25rem;
   height: 3.25rem;
   font-size: 1.1rem;
 }
-
-/* ======== HTML Volume Layout ======== */
 
 .container-paginas {
   width: 40rem;
@@ -158,23 +114,9 @@ main > h1 {
 
 .pagina {
   width: 100%;
-  padding: 1rem;
+  margin-top: 2.1rem;
 }
 
 .pagina > img {
   width: 100%;
-}
-
-/* ======== Classes e Ids para JS ======== */
-
-.outPage{
-  display: none;
-}
-
-.inPage {
-  animation: inPage 1.5s ease-out forwards;
-}
-
-.overflow-hidden {
-  overflow: hidden;
 }
